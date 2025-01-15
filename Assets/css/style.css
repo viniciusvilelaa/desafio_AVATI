@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+/* VARIAVEIS */
+:root{
+    --color-base: #EDDE4B; 
+    --color-gradient: linear-gradient(90deg, var(--color-base), #e1cf2c, #ffe600)
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* SECTION MAIN */
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: var(--color-gradient);
+}
+
+/* CARD CONTAINER */
+.card_container{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 40px;
+    border-radius: 10px;
+    gap: 30px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card_container img{
+    width: 10em;
+}
+.card_container a{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    opacity: 80%;
+    font-weight: lighter;
+    font-style: italic;
+
+}
+
+/* LABEL CONTAINER */
+.label_container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.label_container i{
+    color: var(--color-base);
+    opacity: 90%;
+}
+
+/* INPUTS */
+.input-field{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: text;
+    border-bottom: 1px solid var(--color-base);
+}
+
+.input-field input{
+    width: 18em;
+    height: 2em;
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+}
+
+#login_button{
+    width: 100%;
+    border: none;
+    background: var(--color-gradient);
+    padding: 8px;
+    font-size: 15px;
+    transition: all 0.5s;
+    border-radius: 5px;
+    
+}
+
+
+#login_button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
