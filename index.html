@@ -16,26 +16,30 @@
     <section class="main">
 
         <!-- CARD CONTAINER -->
-        <div class="card_container">
+        <div class="card-container">
 
             <img src="/Assets/Images/logoAVATI.svg" alt="LOGO AVANTI">
 
             <!-- LABEL CONTAINER-->
-            <div class="label_container">
+            <div class="label-container">
                 
                 <!-- INPUT FIELD-->
-                <div class="input-field">
+                <div class="input-field" id="field-user">
                     <i class="fa-solid fa-user" style="width: 16px;"></i>
-                    <input type="text" id="user" required placeholder="Usuário">
+                    <input type="email" id="user" required placeholder="Usuário">
                     <label for="user" id="userLabel"></label>
                 </div>
+                <span class="span-error">Digite um email valido</span>
+
                 
                 <!-- INPUT FIELD-->
-                <div class="input-field">
+                <div class="input-field" id="field-password">
                     <i class="fa-solid fa-key"></i>
                     <input type="password" id="password" required placeholder="Senha">
                     <label for="password" id="passwordLabel"></label>
+                    
                 </div>
+                <span class="span-error">Deve conter no minimo 6 caracteres</span>
             </div>
 
             <a href="#" id="forgot">Esqueci minha senha</a>
