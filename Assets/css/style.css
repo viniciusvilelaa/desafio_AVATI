@@ -6,7 +6,7 @@
     --color-gradient: linear-gradient(90deg, var(--color-base), #e1cf2c, #ffe600)
 }
 
-*{
+body{
     font-family: 'Poppins', sans-serif;
 }
 
@@ -75,9 +75,21 @@
     color: white;
 }
 
-.span-error{
-    display: none;
+#span-validate{
+    font-family: 'Poppins', sans-serif;
+    max-width: 280px;
+    font-size: 13px;
+    font-style: italic;
+    text-align: center;
+}
+
+.span-validate-invalid{
     color: red;
+}
+
+
+.span-validate-sucefull{
+    color: green;
 }
 
 #login_button{
