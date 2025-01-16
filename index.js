@@ -1,58 +1,48 @@
 const user = document.getElementById('user');
 const password = document.getElementById('password');
 const btnLogin = document.getElementById('login_button');
-//const span =  document.querySelectorAll('span-error');
+const span = document.getElementById('span-validate');
 const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
-btnLogin.addEventListener("click", validateLogin);
+btnLogin.addEventListener("click", validate);
 
 
-function validatePassword(){
-    
-    let passwordValue =  password.value.length
-    if(passwordValue < 6){
-        alert('Senha inválida')
-        return false
-    }else{
-        alert('Senha válida')
-        return true
-    }
-}
-
-function validateEmail(){
-    let email = user.value
-    if(emailRegex.test(email)){
-        alert('Email válido')
-    }else{
-        alert('Email inválido')
-    }
-}
-
-function error() {
+function validate() {
     let passwordValue = password.value.length;
-    let email = user.value
+    let email = user.value.trim();
+    let isValidEmail = emailRegex.test(email)
 
-    console.log("Senha:", passwordValue, "Email válido?", email);
+    console.log("Senha:", passwordValue, "Email válido?", isValidEmail);
 
-    if (passwordValue > 6 && !emailRegex.test(email)) {
+    let message = "";
+    let className = "";
+
+    if (passwordValue > 6 && !isValidEmail) {
+
         //EMAIL INVALIDO E SENHA VALIDA
-    } else if (passwordValue <= 6 && emailRegex.test(email)) {
+        className = 'span-validate-invalid';
+        message = 'Digite um e-mail válido!';
+
+    } else if (passwordValue <= 6 && isValidEmail) {
+
         //EMAIL VALIDO E SENHA INVALIDA
-    } else if (passwordValue > 6 && emailRegex.test(email)) {
+        className = 'span-validate-invalid';
+        message = 'A senha deve conter pelo menos 6 caracteres!';
+
+    } else if (passwordValue > 6 && isValidEmail) {
+
         //LOGIN VALIDO
+        className = 'span-validate-sucefull';
+        message = 'Login efetuado com sucesso!';
+
     } else {
         //LOGIN INVÁLIDO
+        className = 'span-validate-invalid';
+        message = 'Digite um e-mail e senha válidos!';
     }
+
+    span.className = className;
+    span.innerText = message;
+
 }
-
-
-function validateLogin(){
-    validateEmail()
-    validatePassword()
-    error()
-}
-
-
-
-
 
