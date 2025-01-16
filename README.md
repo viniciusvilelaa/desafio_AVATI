@@ -19,5 +19,5 @@ Clone o projeto ou baixe o arquivo ZIP
   git clone https://github.com/viniciusvilelaa/desafio_AVATI
 ```
 
-Abra o projeto no VS code e rode utilizando a extensão Live Server(recomendado), porêm, é possivel rodar apenas abrindo o arquivo "index.html" presente no diretório principal do projeto. É possivel que o segundo metodo ocasione erros por questão de configuração das permissões do navegador da máquina utilizada para testar.
+Abra o projeto no VS code e rode utilizando a extensão Live Server(recomendado), porêm, é possivel rodar apenas abrindo o arquivo "index.html" presente no diretório principal do projeto. É possivel que o segundo método ocasione erros por questão de configuração das permissões do navegador da máquina utilizada para testar.
 
