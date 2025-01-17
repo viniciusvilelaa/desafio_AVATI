@@ -18,7 +18,7 @@
         <!-- CARD CONTAINER -->
         <div class="card-container">
 
-            <img src="/Assets/Images/logoAVATI.svg" alt="LOGO AVANTI">
+            <img src="./Assets/Images/logoAVATI.svg" alt="LOGO AVANTI">
 
             <!-- LABEL CONTAINER-->
             <div class="label-container">
@@ -35,11 +35,14 @@
                     <i class="fa-solid fa-key"></i>
                     <input type="password" id="password" required placeholder="Senha">
                     <label for="password" id="passwordLabel"></label>
-                    
                 </div>
             </div>
 
-            <span id="span-validate"></span>
+            <div class="validate-container">
+                <span id="span-validate"></span>
+                <p id="message"></p>
+            </div>
+            
             
             <!-- LOGIN BUTTON-->
             <button type="submit" id="login_button">ENTRAR</button>

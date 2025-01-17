@@ -33,17 +33,9 @@ body{
 }
 
 .card-container img{
-    width: 10em;
+    width: 12em;
 }
-.card-container a{
-    text-decoration: none;
-    text-align: center;
-    color: white;
-    opacity: 80%;
-    font-weight: lighter;
-    font-style: italic;
 
-}
 
 /* LABEL CONTAINER */
 .label-container{
@@ -67,20 +59,22 @@ body{
 }
 
 .input-field input{
-    width: 18em;
-    height: 2em;
+    width: 20em;
+    height: 3em;
+    font-size: 15px;
     border: none;
     outline: none;
     background: none;
     color: white;
 }
 
-#span-validate{
+#message{
     font-family: 'Poppins', sans-serif;
     max-width: 280px;
-    font-size: 13px;
+    font-size: 15px;
     font-style: italic;
     text-align: center;
+    color: #e9f035;
 }
 
 .span-validate-invalid{
@@ -91,6 +85,19 @@ body{
 .span-validate-sucefull{
     color: green;
 }
+
+/* SPAN LOADING */
+.span-loading{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    display: block;
+    border-radius: 50%;
+    border: 5px solid var(--color-base);
+    border-top: 5px solid transparent;
+    animation: loading 1s ease-in-out infinite;
+}
+
 
 #login_button{
     width: 100%;
@@ -107,4 +114,13 @@ body{
 #login_button:hover{
     transform: scale(1.1);
     cursor: pointer;
+}
+
+@keyframes loading {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }

@@ -1,48 +1,57 @@
+//CAPTURANDO ELEMENTOS HTML
 const user = document.getElementById('user');
 const password = document.getElementById('password');
 const btnLogin = document.getElementById('login_button');
 const span = document.getElementById('span-validate');
+const spanMessage = document.getElementById('message')
+
+//REGEX PARA VERIFICAÇÃO DO EMAIL
 const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
-btnLogin.addEventListener("click", validate);
+
+//VALIDAÇÃO DO LOGIN AO CLICAR NO BOTÃO
+btnLogin.addEventListener('click', validate);
 
 
 function validate() {
-    let passwordValue = password.value.length;
-    let email = user.value.trim();
-    let isValidEmail = emailRegex.test(email)
+    let email = user.value.trim(); //CAPTURANDO EMAIL 
+    let isValidEmail = emailRegex.test(email) //VERIFICANDO EMAIL
+    let passwordValue = password.value.length; //CAPTURANDO TAMANHO DA SENHA
 
-    console.log("Senha:", passwordValue, "Email válido?", isValidEmail);
-
+    //VARIAVEIS MODIFICADORAS DO SPAN
     let message = "";
     let className = "";
 
     if (passwordValue > 6 && !isValidEmail) {
 
         //EMAIL INVALIDO E SENHA VALIDA
-        className = 'span-validate-invalid';
+        
         message = 'Digite um e-mail válido!';
 
     } else if (passwordValue <= 6 && isValidEmail) {
 
         //EMAIL VALIDO E SENHA INVALIDA
-        className = 'span-validate-invalid';
+        
         message = 'A senha deve conter pelo menos 6 caracteres!';
 
     } else if (passwordValue > 6 && isValidEmail) {
-
+        
         //LOGIN VALIDO
-        className = 'span-validate-sucefull';
-        message = 'Login efetuado com sucesso!';
+        span.className = 'span-loading';
+        setTimeout(() => {
+            span.classList.remove("span-loading");
+            spanMessage.innerText = 'Login efetuado com sucesso';
+        }, 1000);
+        
 
     } else {
         //LOGIN INVÁLIDO
-        className = 'span-validate-invalid';
+        
         message = 'Digite um e-mail e senha válidos!';
     }
 
-    span.className = className;
-    span.innerText = message;
+    //ALTERANDO SPAN
+    spanMessage.innerText = message;
 
 }
 
