@@ -40,7 +40,7 @@ function validate() {
         span.className = 'span-loading';
         setTimeout(() => {
             span.classList.remove("span-loading");
-            spanMessage.innerText = 'Login efetuado com sucesso';
+            spanMessage.innerText = 'Login efetuado com sucesso!';
         }, 1000);
         
 
