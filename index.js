@@ -41,7 +41,7 @@ function validate() {
         setTimeout(() => {
             span.classList.remove("span-loading");
             spanMessage.innerText = 'Login efetuado com sucesso!';
-        }, 1000);
+        }, 1500);
         
 
     } else {

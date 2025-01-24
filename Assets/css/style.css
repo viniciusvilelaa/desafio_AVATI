@@ -61,7 +61,7 @@ body{
 .input-field input{
     width: 20em;
     height: 3em;
-    font-size: 15px;
+    font-size: 1em;
     border: none;
     outline: none;
     background: none;
@@ -72,7 +72,6 @@ body{
 #message{
     font-family: 'Poppins', sans-serif;
     max-width: 280px;
-    font-size: 15px;
     font-style: italic;
     text-align: center;
     color: #e9f035;
@@ -81,8 +80,8 @@ body{
 
 /* SPAN LOADING */
 .span-loading{
-    width: 30px;
-    height: 30px;
+    width: 2em;
+    height: 2em;
     background-color: transparent;
     display: block;
     border-radius: 50%;
@@ -106,7 +105,7 @@ body{
     border: none;
     background: var(--color-gradient);
     padding: 8px;
-    font-size: 15px;
+    font-size: 1em;
     transition: all 0.5s;
     border-radius: 5px;
     
